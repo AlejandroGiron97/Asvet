@@ -1,0 +1,43 @@
+<header class="bg-white shadow-md sticky top-0 z-50 animate-fadeInDown">
+  <div class="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+
+      <div class="flex-shrink-0 flex items-center gap-4 cursor-pointer group" (click)="irInicio()">
+        <img src="img/Asvet.png" alt="Logo ASVET" class="h-20 w-auto transition-transform group-hover:scale-105">
+
+        <img src="img/premio.png" alt="Premio Mejor Clínica Veterinaria" class="h-10 sm:h-16 w-auto drop-shadow-sm">
+      </div>
+
+      <nav class="hidden md:flex space-x-9 items-center">
+        <a (click)="irInicio()" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Inicio</a>
+
+        <a (click)="navegarA('servicios')" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Servicios</a>
+
+        <a (click)="navegarA('sedes')" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Nuestras Sedes</a>
+      </nav>
+
+      <div class="md:hidden flex items-center">
+        <button (click)="toggleMenu()" class="text-blue-900 hover:text-orange-500 focus:outline-none transition-colors">
+          <svg class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path *ngIf="!menuAbierto" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+            <path *ngIf="menuAbierto" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="menuAbierto" class="md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0 animate-fadeInRight">
+    <div class="px-5 pt-5 pb-7 space-y-3">
+      <a (click)="irInicio()" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">
+        🏠 Inicio
+      </a>
+      <a (click)="navegarA('servicios')" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">
+        🐾 Servicios
+      </a>
+      <a (click)="navegarA('sedes')" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">
+        🏥 Nuestras Sedes
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,16 @@
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-locations',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './locations.component.html',
+  styleUrl: './locations.component.scss'
+})
+export class LocationsComponent {
+  @Input() sedeSeleccionada: 'manizales' | 'pereira' | 'ambas' = 'ambas';
+
+  fotoManizales: string = 'img/sede_manizales.jpeg';
+  fotoPereira: string = 'img/sede_pereira.jpeg';
+}
