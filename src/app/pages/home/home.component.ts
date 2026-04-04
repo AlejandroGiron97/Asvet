@@ -22,25 +22,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   // 📸 Rutas directas a la carpeta public/img
   slides = [
     {
-      url: 'img/hero_1.jpeg',
-      title: 'Cuidamos a tu mejor amigo',
-      subtitle: 'Servicio a Domicilio en Manizales y Pereira'
+      url: 'img/hero_4.jpeg',
     },
     {
-      url: 'img/hero_2.jpeg',
-      title: 'Atención Profesional',
-      subtitle: 'Expertos en salud animal a tu alcance'
+      url: 'img/hero_5.jpeg',
     },
     {
-      url: 'img/hero_3.jpeg',
-      title: 'Tecnología y Amor',
-      subtitle: 'Instalaciones modernas para diagnósticos precisos'
+      url: 'img/hero_6.jpeg',
+    },
+    {
+      url: 'img/hero_7.jpeg',
     }
   ];
 
   ngOnInit() {
-    // Timer automático del slider
-    this.intervalId = setInterval(() => { this.nextSlide(); }, 2000);
+    // Timer automático del slider (aprox. 3 segundos por imagen)
+    this.intervalId = setInterval(() => { this.nextSlide(); }, 5000);
 
     // Esto sigue sirviendo por si alguien entra directo con el link localhost:4200/#manizales
     this.router.events.pipe(
