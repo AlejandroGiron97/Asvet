@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ServicesComponent {
   servicios = [
-    { titulo: 'Consulta Veterinaria', descripcion: '"Si tienes dificultades para desplazarte, contamos con servicio a domicilio o atención en nuestra sede equipada."', imagenUrl: 'img/consulta.jpeg' },
+    { titulo: 'Consulta Veterinaria', descripcion: '"Si tienes dificultades para desplazarte, contamos con servicio a domicilio o atención en nuestra sede equipada."', imagenUrl: 'img/consulta_2.jpeg' },
     { titulo: 'Hospitalización', descripcion: '"Contamos con un área de hospitalización 24/7 diseñada para brindar confort con tecnología de punta."', imagenUrl: 'img/hosp.jpeg' },
     { titulo: 'Cirugía', descripcion: '"Instalaciones adecuadas para esterilizaciones, profilaxis y cirugías de tejidos blandos de alta calidad."', imagenUrl: 'img/cirugia.jpeg' },
     { titulo: 'Laboratorio', descripcion: '"Realizamos toma de muestras con resultados rápidos, ya sea en clínica o desde la comodidad de tu hogar."', imagenUrl: 'img/lab.jpeg' },
