@@ -40,4 +40,10 @@ export class HeaderComponent {
     this.router.navigate(['/']);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  irAEmpleos() {
+    this.menuAbierto = false;
+    this.router.navigate(['/empleos']);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
