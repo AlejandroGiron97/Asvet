@@ -22,16 +22,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   // 📸 Rutas directas a la carpeta public/img
   slides = [
     {
-      url: 'img/hero_4.jpeg',
+      url: 'img/hero_4Ed.jpeg',
     },
     {
-      url: 'img/hero_5.jpeg',
+      url: 'img/hero_5Ed.jpeg',
     },
     {
-      url: 'img/hero_6.jpeg',
+      url: 'img/hero_6Ed.jpeg',
     },
     {
-      url: 'img/hero_7.jpeg',
+      url: 'img/hero_7Ed.jpeg',
     }
   ];
 
