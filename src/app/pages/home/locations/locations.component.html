@@ -1,9 +1,9 @@
-<section id="sedes" class="py-24 bg-gray-50/40 backdrop-blur-sm">
+<section id="sedes" class="py-24 bg-gray-50/40 dark:bg-gray-900/60 backdrop-blur-sm transition-colors duration-300">
   <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
 
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 tracking-tight">Visítanos</h2>
-      <p class="mt-4 text-xl text-gray-500">Encuentra la sede más cercana para la atención de tu mascota.</p>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 dark:text-blue-300 tracking-tight">Visítanos</h2>
+      <p class="mt-4 text-xl text-gray-500 dark:text-gray-400">Encuentra la sede más cercana para la atención de tu mascota.</p>
       <div class="mt-6 w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
     </div>
 
@@ -11,29 +11,29 @@
 
       <!-- ── Sede Manizales ── -->
       <div *ngIf="sedeSeleccionada === 'ambas' || sedeSeleccionada === 'manizales'"
-           class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
+           class="bg-white dark:bg-gray-800 rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
 
-        <div class="py-6 text-center bg-white z-10 relative">
-          <h3 class="text-3xl font-extrabold text-blue-900">Sede Manizales</h3>
+        <div class="py-6 text-center bg-white dark:bg-gray-800 z-10 relative transition-colors duration-300">
+          <h3 class="text-3xl font-extrabold text-blue-900 dark:text-blue-300">Sede Manizales</h3>
           <div class="w-16 h-1 bg-orange-400 mx-auto mt-3 rounded-full"></div>
         </div>
 
-        <div class="relative w-full h-72 sm:h-96 bg-gray-200 overflow-hidden group">
+        <div class="relative w-full h-72 sm:h-96 bg-gray-200 dark:bg-gray-700 overflow-hidden group">
           <img [src]="fotoManizales"
                loading="lazy"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                alt="Sede Manizales ASVET">
         </div>
 
-        <div class="flex flex-col sm:flex-row flex-grow bg-white">
-          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 border-r border-gray-100">
+        <div class="flex flex-col sm:flex-row flex-grow bg-white dark:bg-gray-800 transition-colors duration-300">
+          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 dark:bg-gray-700 border-r border-gray-100 dark:border-gray-600">
             <iframe src="https://maps.google.com/maps?q=Manizales&t=&z=14&ie=UTF8&iwloc=&output=embed"
                     class="absolute top-0 left-0 w-full h-full border-0"
                     allowfullscreen="" loading="lazy"></iframe>
           </div>
 
           <div class="w-full sm:w-1/2 p-8 sm:p-10 flex flex-col justify-center gap-2">
-            <p class="text-gray-600 flex items-start gap-3 font-medium text-lg leading-relaxed mb-4">
+            <p class="text-gray-600 dark:text-gray-300 flex items-start gap-3 font-medium text-lg leading-relaxed mb-4">
               <span class="text-orange-500 mt-1 text-2xl">📍</span> Cra 25A # 53A-66, Barrio la Arboleda
             </p>
             <a href="https://wa.me/573117771849?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Manizales" target="_blank"
@@ -45,7 +45,7 @@
               📞 Celular: 311 777 1849
             </a>
             <a href="tel:6068886533"
-               class="bg-blue-50 text-blue-900 text-center py-4 rounded-xl font-bold hover:bg-blue-100 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
+               class="bg-blue-50 dark:bg-blue-900/40 text-blue-900 dark:text-blue-300 text-center py-4 rounded-xl font-bold hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
               ☎️ Fijo: (606) 888 6533
             </a>
           </div>
@@ -54,29 +54,29 @@
 
       <!-- ── Sede Pereira ── -->
       <div *ngIf="sedeSeleccionada === 'ambas' || sedeSeleccionada === 'pereira'"
-           class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
+           class="bg-white dark:bg-gray-800 rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
 
-        <div class="py-6 text-center bg-white z-10 relative">
-          <h3 class="text-3xl font-extrabold text-blue-900">Sede Pereira</h3>
+        <div class="py-6 text-center bg-white dark:bg-gray-800 z-10 relative transition-colors duration-300">
+          <h3 class="text-3xl font-extrabold text-blue-900 dark:text-blue-300">Sede Pereira</h3>
           <div class="w-16 h-1 bg-orange-400 mx-auto mt-3 rounded-full"></div>
         </div>
 
-        <div class="relative w-full h-72 sm:h-96 bg-gray-200 overflow-hidden group">
+        <div class="relative w-full h-72 sm:h-96 bg-gray-200 dark:bg-gray-700 overflow-hidden group">
           <img [src]="fotoPereira"
                loading="lazy"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                alt="Sede Pereira ASVET">
         </div>
 
-        <div class="flex flex-col sm:flex-row flex-grow bg-white">
-          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 border-r border-gray-100">
+        <div class="flex flex-col sm:flex-row flex-grow bg-white dark:bg-gray-800 transition-colors duration-300">
+          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 dark:bg-gray-700 border-r border-gray-100 dark:border-gray-600">
             <iframe src="https://maps.google.com/maps?q=Pereira&t=&z=14&ie=UTF8&iwloc=&output=embed"
                     class="absolute top-0 left-0 w-full h-full border-0"
                     allowfullscreen="" loading="lazy"></iframe>
           </div>
 
           <div class="w-full sm:w-1/2 p-8 sm:p-10 flex flex-col justify-center gap-2">
-            <p class="text-gray-600 flex items-start gap-3 font-medium text-lg leading-relaxed mb-4">
+            <p class="text-gray-600 dark:text-gray-300 flex items-start gap-3 font-medium text-lg leading-relaxed mb-4">
               <span class="text-orange-500 mt-1 text-2xl">📍</span> Cra 12B # 08-48, Barrio los Rosales
             </p>
             <a href="https://wa.me/573007493929?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Pereira" target="_blank"
@@ -88,7 +88,7 @@
               📞 Celular: 300 749 3929
             </a>
             <a href="tel:6063147471"
-               class="bg-blue-50 text-blue-900 text-center py-4 rounded-xl font-bold hover:bg-blue-100 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
+               class="bg-blue-50 dark:bg-blue-900/40 text-blue-900 dark:text-blue-300 text-center py-4 rounded-xl font-bold hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
               ☎️ Fijo: (606) 314 7471
             </a>
           </div>
