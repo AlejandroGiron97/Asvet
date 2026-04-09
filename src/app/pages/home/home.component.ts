@@ -4,11 +4,12 @@ import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { ServicesComponent } from './services/services.component';
 import { LocationsComponent } from './locations/locations.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, ServicesComponent, LocationsComponent],
+  imports: [CommonModule, RouterModule, ServicesComponent, LocationsComponent, ExperiencesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
