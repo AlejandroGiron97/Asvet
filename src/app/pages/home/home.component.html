@@ -16,11 +16,13 @@
           <source media="(max-width: 768px)" [srcset]="slide.urlMobile">
           <img [src]="slide.urlDesktop"
                class="w-full h-full object-cover"
+               width="1920"
+               height="1080"
                [attr.loading]="i === 0 ? 'eager' : 'lazy'"
-               alt="ASVET Clínica Veterinaria">
+               [attr.fetchpriority]="i === 0 ? 'high' : 'auto'"
+               [attr.alt]="'ASVET Clínica Veterinaria Manizales y Pereira - imagen ' + (i + 1)">
         </picture>
 
-        <!-- Gradiente: fuerte a la izquierda para legibilidad del texto -->
         <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent"></div>
       </div>
 
@@ -60,7 +62,7 @@
           </div>
         </div>
 
-        <!-- Barras de progreso (clickables) -->
+        <!-- Barras de progreso clickables -->
         <div class="flex gap-2 mt-6 md:mt-8 max-w-[200px] md:max-w-xs">
           <div *ngFor="let s of slides; let i = index"
                class="flex-1 h-[3px] bg-white/25 rounded-full overflow-hidden cursor-pointer"
@@ -73,8 +75,9 @@
         </div>
       </div>
 
-      <!-- ── Flechas (solo en hover del slider en desktop) ── -->
+      <!-- ── Flechas hover desktop ── -->
       <button (click)="prevSlide()"
+              aria-label="Imagen anterior"
               class="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-30
                      bg-black/25 hover:bg-orange-500 text-white rounded-full p-2.5 md:p-3
                      backdrop-blur-sm transition-all shadow-xl
@@ -84,6 +87,7 @@
         </svg>
       </button>
       <button (click)="nextSlide()"
+              aria-label="Imagen siguiente"
               class="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-30
                      bg-black/25 hover:bg-orange-500 text-white rounded-full p-2.5 md:p-3
                      backdrop-blur-sm transition-all shadow-xl
