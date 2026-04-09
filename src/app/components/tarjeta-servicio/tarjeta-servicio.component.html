@@ -1,6 +1,6 @@
-<div class="bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full group hover:-translate-y-1">
+<div class="bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl overflow-hidden shadow-sm hover:shadow-xl dark:shadow-gray-900/50 transition-all duration-300 flex flex-col h-full group hover:-translate-y-1">
 
-  <div class="h-32 md:h-56 lg:h-64 w-full overflow-hidden relative bg-gray-200 cursor-pointer" (click)="clickAgendar()">
+  <div class="h-32 md:h-56 lg:h-64 w-full overflow-hidden relative bg-gray-200 dark:bg-gray-700 cursor-pointer" (click)="clickAgendar()">
     <img [src]="imagenUrl"
          loading="lazy"
          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -10,12 +10,19 @@
 
   <div class="p-4 md:p-6 text-center flex-grow flex flex-col justify-between">
     <div>
-      <h3 class="text-sm md:text-xl font-bold mb-2 text-blue-900 leading-tight">{{ titulo }}</h3>
-      <p class="text-sm text-gray-600 leading-relaxed italic hidden md:block mb-4">{{ descripcion }}</p>
+      <h3 class="text-sm md:text-xl font-bold mb-2 text-blue-900 dark:text-blue-300 leading-tight">
+        {{ titulo }}
+      </h3>
+      <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed italic hidden md:block mb-4">
+        {{ descripcion }}
+      </p>
     </div>
 
     <button (click)="clickAgendar()"
-            class="mt-2 bg-orange-50 text-orange-600 font-bold py-2 px-4 rounded-full w-full text-sm md:text-base group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+            class="mt-2 bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400
+                   font-bold py-2 px-4 rounded-full w-full text-sm md:text-base
+                   group-hover:bg-orange-500 group-hover:text-white dark:group-hover:bg-orange-500 dark:group-hover:text-white
+                   transition-all duration-300">
       Agendar Cita
     </button>
   </div>
