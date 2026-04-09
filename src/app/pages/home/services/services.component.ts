@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TarjetaServicioComponent } from '../../../components/tarjeta-servicio/tarjeta-servicio.component';
+import { ModalAgendaComponent } from '../../../components/modal-agenda/modal-agenda.component';
+
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TarjetaServicioComponent, ModalAgendaComponent], // Los agregamos aquí
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
@@ -32,29 +35,5 @@ export class ServicesComponent {
   cerrarAgenda() {
     this.mostrarModal = false;
     this.servicioSeleccionado = '';
-  }
-
-  agendarPorWhatsApp(sede: 'manizales' | 'pereira') {
-    let telefono = '';
-
-    // Asignamos el número dependiendo de la sede elegida
-    if (sede === 'manizales') {
-      telefono = '573117771849';
-    } else if (sede === 'pereira') {
-      telefono = '573007493929';
-    }
-
-    // Armamos el mensaje dinámico
-    const mensaje = `Hola, deseo agendar el servicio de ${this.servicioSeleccionado}.`;
-
-    // Codificamos el texto para que las URLs no se rompan por los espacios
-    const mensajeCodificado = encodeURIComponent(mensaje);
-
-    // Creamos el enlace de WhatsApp y lo abrimos en una nueva pestaña
-    const urlWa = `https://wa.me/${telefono}?text=${mensajeCodificado}`;
-    window.open(urlWa, '_blank');
-
-    // Cerramos el modal
-    this.cerrarAgenda();
   }
 }
