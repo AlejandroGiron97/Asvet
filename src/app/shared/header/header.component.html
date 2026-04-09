@@ -1,44 +1,67 @@
-<header class="bg-white/50 backdrop-blur-sm shadow-md sticky top-0 z-50 animate-fadeInDown">
+<header class="bg-white/50 dark:bg-gray-900/80 backdrop-blur-sm shadow-md sticky top-0 z-50 animate-fadeInDown transition-colors duration-300">
   <div class="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
     <div class="flex justify-between items-center">
 
+      <!-- Logo -->
       <div class="flex-shrink-0 flex items-center cursor-pointer group" (click)="irInicio()">
         <img src="img/Asvet.png" alt="Logo ASVET" class="h-20 md:h-24 w-auto transition-transform group-hover:scale-105">
       </div>
 
+      <!-- Nav desktop -->
       <nav class="hidden md:flex flex-1 justify-center space-x-7 lg:space-x-9 items-center">
-        <a (click)="irInicio()" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Inicio</a>
-        <a (click)="navegarA('servicios')" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Servicios</a>
-        <a (click)="irAEspecializaciones()" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Especialidades</a>
-        <a (click)="navegarA('sedes')" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Nuestras Sedes</a>
-        <a (click)="irAEmpleos()" class="text-gray-600 hover:text-orange-500 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Trabaja con nosotros</a>
+        <a (click)="irInicio()"           class="text-gray-600 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Inicio</a>
+        <a (click)="navegarA('servicios')" class="text-gray-600 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Servicios</a>
+        <a (click)="irAEspecializaciones()" class="text-gray-600 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Especialidades</a>
+        <a (click)="navegarA('sedes')"    class="text-gray-600 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Nuestras Sedes</a>
+        <a (click)="irAEmpleos()"         class="text-gray-600 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 font-bold transition-all text-lg hover:-translate-y-0.5 cursor-pointer">Trabaja con nosotros</a>
       </nav>
 
-      <div class="hidden md:flex items-center">
-        <img src="img/urgencialogo.png" alt="Urgencias 24 Horas" class="h-14 w-auto drop-shadow-sm relative z-10">
-        <img src="img/premio.png" alt="Premio Mejor Clínica Veterinaria" class="h-14 w-auto drop-shadow-sm relative z-0 -ml-4">
+      <!-- Logos + toggle dark -->
+      <div class="hidden md:flex items-center gap-3">
+        <!-- Botón Dark Mode -->
+        <button (click)="theme.toggle()"
+                class="w-10 h-10 rounded-full flex items-center justify-center
+                       bg-gray-100 dark:bg-gray-700
+                       hover:bg-orange-100 dark:hover:bg-orange-900/40
+                       text-gray-700 dark:text-yellow-300
+                       transition-all duration-300 shadow-sm">
+          <span *ngIf="!theme.isDark()" class="text-xl">🌙</span>
+          <span *ngIf="theme.isDark()"  class="text-xl">☀️</span>
+        </button>
+        <img src="img/urgencialogo.png" alt="Urgencias 24 Horas"           class="h-14 w-auto drop-shadow-sm relative z-10">
+        <img src="img/premio.png"       alt="Premio Mejor Clínica Veterinaria" class="h-14 w-auto drop-shadow-sm relative z-0 -ml-4">
       </div>
 
-      <div class="md:hidden flex items-center">
-        <button (click)="toggleMenu()" class="text-blue-900 hover:text-orange-500 focus:outline-none transition-colors">
+      <!-- Hamburguesa móvil -->
+      <div class="md:hidden flex items-center gap-2">
+        <!-- Toggle dark móvil -->
+        <button (click)="theme.toggle()"
+                class="w-9 h-9 rounded-full flex items-center justify-center
+                       bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-300
+                       transition-all duration-300">
+          <span *ngIf="!theme.isDark()" class="text-lg">🌙</span>
+          <span *ngIf="theme.isDark()"  class="text-lg">☀️</span>
+        </button>
+        <button (click)="toggleMenu()" class="text-blue-900 dark:text-white hover:text-orange-500 focus:outline-none transition-colors">
           <svg class="h-9 w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path *ngIf="!menuAbierto" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
-            <path *ngIf="menuAbierto" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+            <path *ngIf="menuAbierto"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
     </div>
   </div>
 
-  <div *ngIf="menuAbierto" class="md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0 animate-fadeInRight">
+  <!-- Menú móvil desplegable -->
+  <div *ngIf="menuAbierto" class="md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700 shadow-xl absolute w-full left-0 animate-fadeInRight transition-colors duration-300">
     <div class="px-5 pt-5 pb-7 space-y-3">
-      <a (click)="irInicio()" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">🏠 Inicio</a>
-      <a (click)="navegarA('servicios')" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">🐾 Servicios</a>
-      <a (click)="irAEspecializaciones()" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">🩺 Especialidades</a>
-      <a (click)="navegarA('sedes')" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">🏥 Nuestras Sedes</a>
-      <a (click)="irAEmpleos()" class="block px-4 py-3.5 text-lg font-bold text-gray-700 hover:text-orange-500 hover:bg-orange-50 rounded-xl transition-colors cursor-pointer">💼 Trabaja con nosotros</a>
+      <a (click)="irInicio()"            class="block px-4 py-3.5 text-lg font-bold text-gray-700 dark:text-gray-200 hover:text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl transition-colors cursor-pointer">🏠 Inicio</a>
+      <a (click)="navegarA('servicios')" class="block px-4 py-3.5 text-lg font-bold text-gray-700 dark:text-gray-200 hover:text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl transition-colors cursor-pointer">🐾 Servicios</a>
+      <a (click)="irAEspecializaciones()" class="block px-4 py-3.5 text-lg font-bold text-gray-700 dark:text-gray-200 hover:text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl transition-colors cursor-pointer">🩺 Especialidades</a>
+      <a (click)="navegarA('sedes')"     class="block px-4 py-3.5 text-lg font-bold text-gray-700 dark:text-gray-200 hover:text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl transition-colors cursor-pointer">🏥 Nuestras Sedes</a>
+      <a (click)="irAEmpleos()"          class="block px-4 py-3.5 text-lg font-bold text-gray-700 dark:text-gray-200 hover:text-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl transition-colors cursor-pointer">💼 Trabaja con nosotros</a>
 
-      <div class="flex justify-center items-center pt-6 mt-4 border-t border-gray-200">
+      <div class="flex justify-center items-center pt-6 mt-4 border-t border-gray-200 dark:border-gray-700">
         <img src="img/urgencialogo.png" alt="Urgencias 24 Horas" class="h-14 w-auto drop-shadow-sm relative z-10">
         <img src="img/premio.png" alt="Premio Mejor Clínica Veterinaria" class="h-16 w-auto drop-shadow-sm relative z-0 -ml-6">
       </div>

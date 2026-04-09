@@ -1,8 +1,10 @@
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+// Barra de progreso del slider:
+// dura exactamente 5 s, igual que el timer del componente
+.progress-bar-active {
+  animation: fillProgress 5s linear forwards;
 }
 
-.animate-fadeIn {
-  animation: fadeIn 1s ease-out forwards;
+@keyframes fillProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
 }
