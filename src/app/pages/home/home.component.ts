@@ -20,24 +20,28 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentIndex: number = 0;
   private intervalId: any;
 
-  // 📸 Rutas directas a la carpeta public/img
+  // 📸 Rutas directas a la carpeta public/img (AHORA CON VERSIÓN MÓVIL)
   slides = [
     {
-      url: 'img/hero_4Ed.jpeg',
+      urlDesktop: 'img/hero_4Ed2.png',
+      urlMobile: 'img/hero_4Ed2.PNG'
     },
     {
-      url: 'img/hero_5Ed.jpeg',
+      urlDesktop: 'img/hero_5Ed.jpeg',
+      urlMobile: 'img/hero_5_movil.jpeg'
     },
     {
-      url: 'img/hero_6Ed.jpeg',
+      urlDesktop: 'img/hero_6Ed.jpeg',
+      urlMobile: 'img/hero_6_movil.jpeg'
     },
     {
-      url: 'img/hero_7Ed.jpeg',
+      urlDesktop: 'img/hero_7Ed.jpeg',
+      urlMobile: 'img/hero_7_movil.jpeg'
     }
   ];
 
   ngOnInit() {
-    // Timer automático del slider (aprox. 3 segundos por imagen)
+    // Timer automático del slider (aprox. 5 segundos por imagen)
     this.intervalId = setInterval(() => { this.nextSlide(); }, 5000);
 
     // Esto sigue sirviendo por si alguien entra directo con el link localhost:4200/#manizales
