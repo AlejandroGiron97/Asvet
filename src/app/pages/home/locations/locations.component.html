@@ -9,6 +9,7 @@
 
     <div [ngClass]="sedeSeleccionada === 'ambas' ? 'grid grid-cols-1 xl:grid-cols-2 gap-12' : 'max-w-5xl mx-auto'">
 
+      <!-- ── Sede Manizales ── -->
       <div *ngIf="sedeSeleccionada === 'ambas' || sedeSeleccionada === 'manizales'"
            class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
 
@@ -18,29 +19,31 @@
         </div>
 
         <div class="relative w-full h-72 sm:h-96 bg-gray-200 overflow-hidden group">
-          <img [src]="fotoManizales" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <img [src]="fotoManizales"
+               loading="lazy"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+               alt="Sede Manizales ASVET">
         </div>
 
         <div class="flex flex-col sm:flex-row flex-grow bg-white">
           <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 border-r border-gray-100">
-            <iframe src="https://maps.google.com/maps?q=Manizales&t=&z=14&ie=UTF8&iwloc=&output=embed" class="absolute top-0 left-0 w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://maps.google.com/maps?q=Manizales&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    allowfullscreen="" loading="lazy"></iframe>
           </div>
 
           <div class="w-full sm:w-1/2 p-8 sm:p-10 flex flex-col justify-center gap-2">
             <p class="text-gray-600 flex items-start gap-3 font-medium text-lg leading-relaxed mb-4">
               <span class="text-orange-500 mt-1 text-2xl">📍</span> Cra 25A # 53A-66, Barrio la Arboleda
             </p>
-
             <a href="https://wa.me/573117771849?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Manizales" target="_blank"
                class="bg-green-500 text-white text-center py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-md flex items-center justify-center gap-2 text-lg">
               📱 Agendar cita Manizales
             </a>
-
             <a href="tel:3117771849"
                class="bg-blue-600 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-md flex items-center justify-center gap-2 text-lg">
               📞 Celular: 311 777 1849
             </a>
-
             <a href="tel:6068886533"
                class="bg-blue-50 text-blue-900 text-center py-4 rounded-xl font-bold hover:bg-blue-100 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
               ☎️ Fijo: (606) 888 6533
@@ -49,6 +52,7 @@
         </div>
       </div>
 
+      <!-- ── Sede Pereira ── -->
       <div *ngIf="sedeSeleccionada === 'ambas' || sedeSeleccionada === 'pereira'"
            class="bg-white rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
 
@@ -58,29 +62,31 @@
         </div>
 
         <div class="relative w-full h-72 sm:h-96 bg-gray-200 overflow-hidden group">
-          <img [src]="fotoPereira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <img [src]="fotoPereira"
+               loading="lazy"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+               alt="Sede Pereira ASVET">
         </div>
 
         <div class="flex flex-col sm:flex-row flex-grow bg-white">
           <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 border-r border-gray-100">
-            <iframe src="https://maps.google.com/maps?q=Pereira&t=&z=14&ie=UTF8&iwloc=&output=embed" class="absolute top-0 left-0 w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://maps.google.com/maps?q=Pereira&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    allowfullscreen="" loading="lazy"></iframe>
           </div>
 
           <div class="w-full sm:w-1/2 p-8 sm:p-10 flex flex-col justify-center gap-2">
             <p class="text-gray-600 flex items-start gap-3 font-medium text-lg leading-relaxed mb-4">
               <span class="text-orange-500 mt-1 text-2xl">📍</span> Cra 12B # 08-48, Barrio los Rosales
             </p>
-
             <a href="https://wa.me/573007493929?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Pereira" target="_blank"
                class="bg-green-500 text-white text-center py-4 rounded-xl font-bold hover:bg-green-600 transition-colors shadow-md flex items-center justify-center gap-2 text-lg">
               📱 Agendar cita Pereira
             </a>
-
             <a href="tel:3007493929"
                class="bg-blue-600 text-white text-center py-4 rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-md flex items-center justify-center gap-2 text-lg">
               📞 Celular: 300 749 3929
             </a>
-
             <a href="tel:6063147471"
                class="bg-blue-50 text-blue-900 text-center py-4 rounded-xl font-bold hover:bg-blue-100 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
               ☎️ Fijo: (606) 314 7471
