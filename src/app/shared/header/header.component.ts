@@ -46,4 +46,10 @@ export class HeaderComponent {
     this.router.navigate(['/empleos']);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  irAEspecializaciones() {
+    this.menuAbierto = false;
+    this.router.navigate(['/especializaciones']);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
