@@ -1,32 +1,29 @@
 <div *ngIf="mostrar" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fadeIn">
+  <div class="bg-white dark:bg-gray-800 rounded-[2rem] shadow-2xl p-8 max-w-sm w-full relative animate-fadeInUp transition-colors duration-300">
 
-  <div class="bg-white rounded-[2rem] shadow-2xl p-8 max-w-sm w-full relative animate-fadeInUp">
-
-    <button (click)="cerrar.emit()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
+    <button (click)="cerrar.emit()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 dark:hover:text-white transition-colors">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
       </svg>
     </button>
 
     <div class="text-center mb-6 mt-2">
-      <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">📱</div>
-      <h3 class="text-2xl font-extrabold text-blue-900 mb-1">Agendar Cita</h3>
-      <p class="text-gray-600 mb-2">Servicio: <span class="font-bold text-orange-500">{{ servicioSeleccionado }}</span></p>
-      <p class="text-gray-500 text-sm">¿En qué sede te gustaría ser atendido?</p>
+      <div class="bg-green-100 dark:bg-green-900/40 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">📱</div>
+      <h3 class="text-2xl font-extrabold text-blue-900 dark:text-blue-300 mb-1">Agendar Cita</h3>
+      <p class="text-gray-600 dark:text-gray-400 mb-2">Servicio: <span class="font-bold text-orange-500">{{ servicioSeleccionado }}</span></p>
+      <p class="text-gray-500 dark:text-gray-400 text-sm">¿En qué sede te gustaría ser atendido?</p>
     </div>
 
     <div class="flex flex-col gap-3">
       <button (click)="agendarPorWhatsApp('manizales')"
-              class="bg-[#25D366] hover:bg-[#1da851] text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group">
-         📍 Sede Manizales
+              class="bg-[#25D366] hover:bg-[#1da851] text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+        📍 Sede Manizales
       </button>
-
       <button (click)="agendarPorWhatsApp('pereira')"
-              class="bg-[#25D366] hover:bg-[#1da851] text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group">
-         📍 Sede Pereira
+              class="bg-[#25D366] hover:bg-[#1da851] text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+        📍 Sede Pereira
       </button>
     </div>
 
   </div>
-
 </div>
