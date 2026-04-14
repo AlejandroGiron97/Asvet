@@ -21,10 +21,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private intervalId: any;
 
   slides = [
-    { urlDesktop: 'img/hero_1O.webp',   urlMobile: 'img/hero_1O.webp' },
-    { urlDesktop: 'img/hero_2O.webp',   urlMobile: 'img/hero_2O.webp' },
-    { urlDesktop: 'img/hero_3O.webp',   urlMobile: 'img/hero_3O.webp' },
-    { urlDesktop: 'img/hero_4O.webp',   urlMobile: 'img/hero_4O.webp' }
+    { urlDesktop: 'img/hero_1O.webp', urlMobile: 'img/hero_1O.webp' },
+    { urlDesktop: 'img/hero_2O.webp', urlMobile: 'img/hero_2O.webp' },
+    { urlDesktop: 'img/hero_3O.webp', urlMobile: 'img/hero_3O.webp' },
+    { urlDesktop: 'img/hero_4O.webp', urlMobile: 'img/hero_4O.webp' }
   ];
 
   ngOnInit() {
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       const fragment = this.router.routerState.snapshot.root.fragment;
 
       if (url === '/') { this.sedeActiva = 'ambas'; this.currentIndex = 0; return; }
-      if (fragment === 'sedes')      { this.sedeActiva = 'ambas';     }
+      if (fragment === 'sedes')          { this.sedeActiva = 'ambas';     }
       else if (fragment === 'manizales') { this.sedeActiva = 'manizales'; }
       else if (fragment === 'pereira')   { this.sedeActiva = 'pereira';   }
     });
@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   nextSlide() { this.currentIndex = (this.currentIndex + 1) % this.slides.length; }
   prevSlide() { this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length; }
 
-  // 🆕 Nuevo: ir a slide específico y reiniciar timer
   goToSlide(index: number) {
     this.currentIndex = index;
     if (this.intervalId) clearInterval(this.intervalId);
