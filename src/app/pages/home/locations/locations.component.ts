@@ -12,5 +12,9 @@ export class LocationsComponent {
   @Input() sedeSeleccionada: 'manizales' | 'pereira' | 'ambas' = 'ambas';
 
   fotoManizales: string = 'img/sede_manizales.webp';
-  fotoPereira: string = 'img/sede_pereira.webp';
+  fotoPereira:   string = 'img/sede_pereira.webp';
+
+  // 🆕 Controlan si ya se cargó el iframe real
+  mapaManizalesActivo = false;
+  mapaPerieraActivo   = false;
 }

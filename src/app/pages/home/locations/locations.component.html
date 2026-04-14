@@ -21,15 +21,30 @@
         <div class="relative w-full h-72 sm:h-96 bg-gray-200 dark:bg-gray-700 overflow-hidden group">
           <img [src]="fotoManizales"
                loading="lazy"
-               width="800"
-               height="500"
+               width="800" height="500"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                alt="Sede ASVET Manizales - Cra 25A # 53A-66 Barrio la Arboleda">
         </div>
 
         <div class="flex flex-col sm:flex-row flex-grow bg-white dark:bg-gray-800 transition-colors duration-300">
-          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 dark:bg-gray-700 border-r border-gray-100 dark:border-gray-600">
-            <iframe src="https://maps.google.com/maps?q=Manizales&t=&z=14&ie=UTF8&iwloc=&output=embed"
+
+          <!-- 🆕 Mapa con fachada — el iframe solo carga al hacer click -->
+          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 dark:bg-gray-700 border-r border-gray-100 dark:border-gray-600 cursor-pointer"
+               (click)="mapaManizalesActivo = true">
+
+            <!-- Placeholder visible hasta que el usuario toca el mapa -->
+            <div *ngIf="!mapaManizalesActivo"
+                 class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+              <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span class="text-sm font-semibold text-gray-500 dark:text-gray-400">Toca para ver el mapa</span>
+            </div>
+
+            <!-- Iframe real — solo se renderiza después del click -->
+            <iframe *ngIf="mapaManizalesActivo"
+                    src="https://maps.google.com/maps?q=Cra+25A+%2353A-66+Manizales&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     class="absolute top-0 left-0 w-full h-full border-0"
                     title="Mapa Sede Manizales ASVET"
                     allowfullscreen="" loading="lazy"></iframe>
@@ -67,15 +82,30 @@
         <div class="relative w-full h-72 sm:h-96 bg-gray-200 dark:bg-gray-700 overflow-hidden group">
           <img [src]="fotoPereira"
                loading="lazy"
-               width="800"
-               height="500"
+               width="800" height="500"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                alt="Sede ASVET Pereira - Cra 12B # 08-48 Barrio los Rosales">
         </div>
 
         <div class="flex flex-col sm:flex-row flex-grow bg-white dark:bg-gray-800 transition-colors duration-300">
-          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 dark:bg-gray-700 border-r border-gray-100 dark:border-gray-600">
-            <iframe src="https://maps.google.com/maps?q=Pereira&t=&z=14&ie=UTF8&iwloc=&output=embed"
+
+          <!-- 🆕 Mapa con fachada — el iframe solo carga al hacer click -->
+          <div class="w-full sm:w-1/2 h-64 sm:h-auto relative bg-gray-100 dark:bg-gray-700 border-r border-gray-100 dark:border-gray-600 cursor-pointer"
+               (click)="mapaPerieraActivo = true">
+
+            <!-- Placeholder visible hasta que el usuario toca el mapa -->
+            <div *ngIf="!mapaPerieraActivo"
+                 class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+              <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span class="text-sm font-semibold text-gray-500 dark:text-gray-400">Toca para ver el mapa</span>
+            </div>
+
+            <!-- Iframe real — solo se renderiza después del click -->
+            <iframe *ngIf="mapaPerieraActivo"
+                    src="https://maps.google.com/maps?q=Cra+12B+%2308-48+Pereira&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     class="absolute top-0 left-0 w-full h-full border-0"
                     title="Mapa Sede Pereira ASVET"
                     allowfullscreen="" loading="lazy"></iframe>
