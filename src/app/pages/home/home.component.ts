@@ -21,10 +21,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private intervalId: any;
 
   slides = [
-    { urlDesktop: 'img/hero_4Ed2.png',   urlMobile: 'img/hero_4Ed2.PNG'       },
-    { urlDesktop: 'img/hero_5Ed.jpeg',   urlMobile: 'img/hero_5_movil.jpeg'   },
-    { urlDesktop: 'img/hero_6Ed.jpeg',   urlMobile: 'img/hero_6_movil.jpeg'   },
-    { urlDesktop: 'img/hero_7Ed.jpeg',   urlMobile: 'img/hero_7_movil.jpeg'   }
+    { urlDesktop: 'img/hero_1O.webp',   urlMobile: 'img/hero_1O.webp' },
+    { urlDesktop: 'img/hero_2O.webp',   urlMobile: 'img/hero_2O.webp' },
+    { urlDesktop: 'img/hero_3O.webp',   urlMobile: 'img/hero_3O.webp' },
+    { urlDesktop: 'img/hero_4O.webp',   urlMobile: 'img/hero_4O.webp' }
   ];
 
   ngOnInit() {
