@@ -2,7 +2,12 @@
 <main>
   <router-outlet></router-outlet>
 </main>
-<app-footer></app-footer>
+
+@defer (on idle) {
+  <app-footer></app-footer>
+} @placeholder {
+  <div class="h-40 bg-gray-900/50"></div>
+}
 
 <div *ngIf="mostrarCookies"
      class="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[600px]

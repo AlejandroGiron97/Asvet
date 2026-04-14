@@ -16,16 +16,16 @@ export class EspecializacionesComponent {
 
   // Lista de especializaciones (Datos de prueba hasta que el cliente mande los reales)
   especializaciones = [
-    { titulo: 'Ortopedia', descripcion: '"Tratamiento de fracturas, problemas articulares y afecciones del sistema musculoesquelético."', imagenUrl: 'img/sinFoto.webp' },
-    { titulo: 'Neurología', descripcion: '"Atención especializada en problemas del sistema nervioso, convulsiones y columna vertebral."', imagenUrl: 'img/sinFoto.webp' },
-    { titulo: 'Dermatología', descripcion: '"Cuidado experto para problemas de piel, alergias crónicas y enfermedades del pelaje."', imagenUrl: 'img/sinFoto.webp' },
+    { titulo: 'Ortopedia', descripcion: '"Tratamiento de fracturas, problemas articulares y afecciones del sistema musculoesquelético."', imagenUrl: 'img/orto.webp' },
+    { titulo: 'Neurología', descripcion: '"Atención especializada en problemas del sistema nervioso, convulsiones y columna vertebral."', imagenUrl: 'img/neuro.webp' },
+    { titulo: 'Dermatología', descripcion: '"Cuidado experto para problemas de piel, alergias crónicas y enfermedades del pelaje."', imagenUrl: 'img/derma.webp' },
     { titulo: 'Cardiología', descripcion: '"Diagnóstico y tratamiento de enfermedades del corazón y sistema circulatorio."', imagenUrl: 'img/sinFoto.webp' },
     { titulo: 'Oftamología', descripcion: '"Cuidado experto para problemas oculares, enfermedades de la visión y afecciones como infecciones, irritaciones y cataratas."', imagenUrl: 'img/sinFoto.webp' },
     { titulo: 'Oncología', descripcion: '"Diagnóstico y tratamiento del cáncer, incluyendo tumores y su manejo integral."', imagenUrl: 'img/sinFoto.webp' },
     { titulo: 'Nutrición', descripcion: '"Planificación y control de la alimentación para mantener la salud y el bienestar."', imagenUrl: 'img/sinFoto.webp' },
     { titulo: 'Nefrología', descripcion: '"Diagnóstico y tratamiento de enfermedades renales y del sistema urinario."', imagenUrl: 'img/sinFoto.webp' },
-    { titulo: 'Etología', descripcion: '"Estudio y manejo del comportamiento animal para mejorar su bienestar y convivencia."', imagenUrl: 'img/sinFoto.webp' },
-    { titulo: 'Gastroenterología', descripcion: '"Diagnóstico y tratamiento de enfermedades del sistema digestivo."', imagenUrl: 'img/sinFoto.webp' },
+    { titulo: 'Etología', descripcion: '"Estudio y manejo del comportamiento animal para mejorar su bienestar y convivencia."', imagenUrl: 'img/etiolo.webp' },
+    { titulo: 'Gastroenterología', descripcion: '"Diagnóstico y tratamiento de enfermedades del sistema digestivo."', imagenUrl: 'img/gastro.webp' },
     { titulo: 'Medicina Interna', descripcion: '"Diagnóstico y tratamiento integral de enfermedades internas."', imagenUrl: 'img/sinFoto.webp' },
     { titulo: 'Odontología', descripcion: '"Cuidado y tratamiento de la salud dental, incluyendo limpieza, prevención y enfermedades bucales."', imagenUrl: 'img/sinFoto.webp' },
   ];
