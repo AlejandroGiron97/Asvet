@@ -11,6 +11,6 @@ import { CommonModule } from '@angular/common';
 export class LocationsComponent {
   @Input() sedeSeleccionada: 'manizales' | 'pereira' | 'ambas' = 'ambas';
 
-  fotoManizales: string = 'img/sede_manizales.jpeg';
-  fotoPereira: string = 'img/sede_pereira.jpeg';
+  fotoManizales: string = 'img/sede_manizales.webp';
+  fotoPereira: string = 'img/sede_pereira.webp';
 }
