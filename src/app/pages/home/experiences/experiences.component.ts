@@ -27,7 +27,12 @@ export class ExperiencesComponent implements OnInit, OnDestroy {
     { url: 'img/comen_4.webp', name: 'Cliente 4', comment: 'Servicio de calidad.' },
     { url: 'img/comen_5.webp', name: 'Cliente 5', comment: 'Muy satisfecho con el cuidado.' },
     { url: 'img/comen_6.webp', name: 'Cliente 6', comment: 'Recomiendo ampliamente.' },
-    { url: 'img/comen_7.webp', name: 'Cliente 7', comment: 'Excelente veterinaria.' }
+    { url: 'img/comen_7.webp', name: 'Cliente 7', comment: 'Excelente veterinaria.' },
+    { url: 'img/comen_8.webp', name: 'Cliente 8', comment: 'Muy buen trato y explicación clara del tratamiento.' },
+    { url: 'img/comen_9.webp', name: 'Cliente 9', comment: 'Se nota la experiencia y el amor por los animales.' },
+    { url: 'img/comen_10.webp', name: 'Cliente 10', comment: 'Instalaciones limpias y servicio muy profesional.' },
+    { url: 'img/comen_11.webp', name: 'Cliente 11', comment: 'Me dieron mucha confianza desde la primera consulta.' },
+    { url: 'img/comen_12.webp', name: 'Cliente 12', comment: 'Excelente atención, volveré sin duda.' }
   ];
 
   ngOnInit(): void {
