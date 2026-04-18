@@ -26,7 +26,7 @@ export class EspecializacionesComponent {
     { titulo: 'Nefrología', descripcion: '"Diagnóstico y tratamiento de enfermedades renales y del sistema urinario."', imagenUrl: 'img/nefro.webp' },
     { titulo: 'Etología', descripcion: '"Estudio y manejo del comportamiento animal para mejorar su bienestar y convivencia."', imagenUrl: 'img/etolo.webp' },
     { titulo: 'Gastroenterología', descripcion: '"Diagnóstico y tratamiento de enfermedades del sistema digestivo."', imagenUrl: 'img/gastro.webp' },
-    { titulo: 'Medicina Interna', descripcion: '"Diagnóstico y tratamiento integral de enfermedades internas."', imagenUrl: 'img/sinFoto.webp' },
+    { titulo: 'Medicina Interna', descripcion: '"Diagnóstico y tratamiento integral de enfermedades internas."', imagenUrl: 'img/mediInter.webp' },
     { titulo: 'Odontología', descripcion: '"Cuidado y tratamiento de la salud dental, incluyendo limpieza, prevención y enfermedades bucales."', imagenUrl: 'img/denta.webp' },
   ];
 
