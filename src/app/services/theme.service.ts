@@ -1,23 +1,22 @@
 import { Injectable, signal } from '@angular/core';
 
+const HORA_INICIO_NOCHE = 18; // 6:00 PM
+const HORA_FIN_NOCHE    = 6;  // 6:00 AM
+
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
   isDark = signal<boolean>(false);
 
   constructor() {
     if (typeof window === 'undefined') return;
-    const saved       = localStorage.getItem('asvet_theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const dark        = saved ? saved === 'dark' : prefersDark;
+    const dark = this.esHoraNocturna();
     this.isDark.set(dark);
     this.apply(dark);
   }
 
-  toggle() {
-    const next = !this.isDark();
-    this.isDark.set(next);
-    this.apply(next);
-    localStorage.setItem('asvet_theme', next ? 'dark' : 'light');
+  private esHoraNocturna(): boolean {
+    const hora = new Date().getHours();
+    return hora >= HORA_INICIO_NOCHE || hora < HORA_FIN_NOCHE;
   }
 
   private apply(dark: boolean) {

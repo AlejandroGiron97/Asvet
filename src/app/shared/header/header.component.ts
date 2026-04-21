@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -12,8 +11,7 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class HeaderComponent {
   private router = inject(Router);
-  theme          = inject(ThemeService);
-  menuAbierto    = false;
+  menuAbierto = false;
 
   toggleMenu() { this.menuAbierto = !this.menuAbierto; }
 

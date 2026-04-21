@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
-
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -13,20 +14,15 @@ import { HeaderComponent } from './shared/header/header.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+  private theme = inject(ThemeService);
   mostrarCookies = false;
 
   ngOnInit() {
-    // 🔥 FIX: Preguntamos si existe 'window' para evitar que Angular colapse en el servidor
     if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
-
-      // Le cambiamos el nombre a la llave para "reiniciar" la memoria de tu navegador en esta prueba
       if (!localStorage.getItem('cookies_asvet_v1')) {
-
-        // Esperamos 1.5 segundos para que no salga de golpe al cargar la página
         setTimeout(() => {
           this.mostrarCookies = true;
         }, 1500);
-
       }
     }
   }
