@@ -1,5 +1,8 @@
 import { Injectable, signal } from '@angular/core';
 
+const HORA_INICIO_NOCHE = 18; // 6:00 PM
+const HORA_FIN_NOCHE    = 6;  // 6:00 AM
+
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
   isDark = signal<boolean>(false);
@@ -13,7 +16,7 @@ export class ThemeService {
 
   private esHoraNocturna(): boolean {
     const hora = new Date().getHours();
-    return hora >= 18 || hora < 6;
+    return hora >= HORA_INICIO_NOCHE || hora < HORA_FIN_NOCHE;
   }
 
   private apply(dark: boolean) {
