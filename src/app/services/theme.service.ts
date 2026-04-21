@@ -6,18 +6,14 @@ export class ThemeService {
 
   constructor() {
     if (typeof window === 'undefined') return;
-    const saved       = localStorage.getItem('asvet_theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const dark        = saved ? saved === 'dark' : prefersDark;
+    const dark = this.esHoraNocturna();
     this.isDark.set(dark);
     this.apply(dark);
   }
 
-  toggle() {
-    const next = !this.isDark();
-    this.isDark.set(next);
-    this.apply(next);
-    localStorage.setItem('asvet_theme', next ? 'dark' : 'light');
+  private esHoraNocturna(): boolean {
+    const hora = new Date().getHours();
+    return hora >= 18 || hora < 6;
   }
 
   private apply(dark: boolean) {

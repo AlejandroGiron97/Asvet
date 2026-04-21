@@ -48,18 +48,8 @@
         </a>
       </nav>
 
-      <!-- Logos + toggle dark -->
+      <!-- Logos desktop -->
       <div class="hidden md:flex items-center gap-3">
-        <button (click)="theme.toggle()"
-                aria-label="Cambiar tema"
-                class="w-10 h-10 rounded-full flex items-center justify-center
-                       bg-gray-100 dark:bg-gray-700
-                       hover:bg-orange-100 dark:hover:bg-orange-900/40
-                       text-gray-700 dark:text-yellow-300
-                       transition-all duration-300 shadow-sm">
-          <span *ngIf="!theme.isDark()" class="text-xl">🌙</span>
-          <span *ngIf="theme.isDark()"  class="text-xl">☀️</span>
-        </button>
         <img src="img/urgenciasNuevo.webp" alt="Urgencias 24 Horas"
              width="56" height="56"
              class="h-16 w-auto drop-shadow-sm relative z-10 mr-[15px]">
@@ -69,15 +59,7 @@
       </div>
 
       <!-- Hamburguesa móvil -->
-      <div class="md:hidden flex items-center gap-2">
-        <button (click)="theme.toggle()"
-                aria-label="Cambiar tema"
-                class="w-9 h-9 rounded-full flex items-center justify-center
-                       bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-yellow-300
-                       transition-all duration-300">
-          <span *ngIf="!theme.isDark()" class="text-lg">🌙</span>
-          <span *ngIf="theme.isDark()"  class="text-lg">☀️</span>
-        </button>
+      <div class="md:hidden flex items-center">
         <button (click)="toggleMenu()"
                 aria-label="Abrir menú"
                 class="text-blue-900 dark:text-white hover:text-orange-500 focus:outline-none transition-colors">
