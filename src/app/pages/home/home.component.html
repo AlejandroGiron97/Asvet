@@ -15,7 +15,7 @@
         <picture class="w-full h-full block">
           <source media="(max-width: 768px)" [srcset]="slide.urlMobile">
           <img [src]="slide.urlDesktop"
-               class="w-full h-full object-cover"
+               class="w-full h-full object-contain md:object-cover bg-gray-900"
                width="1920"
                height="1080"
                [attr.loading]="i === 0 ? 'eager' : 'lazy'"
