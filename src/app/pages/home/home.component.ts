@@ -6,6 +6,9 @@ import { ServicesComponent } from './services/services.component';
 import { LocationsComponent } from './locations/locations.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 
+const HORA_FIN_MANANA = 12; // 12:00 PM
+const HORA_FIN_TARDE  = 18; // 6:00 PM
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -19,6 +22,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   sedeActiva: 'manizales' | 'pereira' | 'ambas' = 'ambas';
   currentIndex = 0;
   private intervalId: any;
+
+  // 🆕 Saludo
+  mostrarSaludo  = false;
+  mensajeSaludo  = '';
 
   slides = [
     { urlDesktop: 'img/hero_1O.webp', urlMobile: 'img/hero_1O.webp' },
@@ -35,16 +42,35 @@ export class HomeComponent implements OnInit, OnDestroy {
     ).subscribe(() => {
       const url      = this.router.url;
       const fragment = this.router.routerState.snapshot.root.fragment;
-
       if (url === '/') { this.sedeActiva = 'ambas'; this.currentIndex = 0; return; }
       if (fragment === 'sedes')          { this.sedeActiva = 'ambas';     }
       else if (fragment === 'manizales') { this.sedeActiva = 'manizales'; }
       else if (fragment === 'pereira')   { this.sedeActiva = 'pereira';   }
     });
+
+    // 🆕 Saludo aparece a los 800ms
+    setTimeout(() => { this.iniciarSaludo(); }, 800);
   }
 
   ngOnDestroy() {
     if (this.intervalId) clearInterval(this.intervalId);
+  }
+
+  private iniciarSaludo() {
+    const hora = new Date().getHours();
+
+    if (hora >= 0 && hora < HORA_FIN_MANANA) {
+      this.mensajeSaludo = '¡Buenos días! Bienvenido a ASVET 🌅';
+    } else if (hora >= HORA_FIN_MANANA && hora < HORA_FIN_TARDE) {
+      this.mensajeSaludo = '¡Buenas tardes! Bienvenido a ASVET ☀️';
+    } else {
+      this.mensajeSaludo = '¡Buenas noches! Bienvenido a ASVET 🌙';
+    }
+
+    this.mostrarSaludo = true;
+
+    // Desaparece a los 3.5 segundos
+    setTimeout(() => { this.mostrarSaludo = false; }, 1500);
   }
 
   nextSlide() { this.currentIndex = (this.currentIndex + 1) % this.slides.length; }
