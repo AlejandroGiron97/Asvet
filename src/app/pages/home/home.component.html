@@ -23,58 +23,35 @@
                [attr.alt]="'ASVET Clínica Veterinaria Manizales y Pereira - imagen ' + (i + 1)">
         </picture>
 
-        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent"></div>
+        <!-- Gradiente: suave en móvil, más fuerte en desktop -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent md:from-black/70 md:via-black/25"></div>
       </div>
 
       <!-- ── Contenido ── -->
       <div class="absolute inset-0 z-20 flex flex-col justify-end p-5 sm:p-10 md:p-14">
-        <div class="max-w-lg">
 
-          <!-- Contador de slide -->
-          <div class="flex items-center gap-2 mb-4 md:mb-6">
-            <span class="text-orange-400 font-black text-xl md:text-2xl tabular-nums">
-              {{ (currentIndex + 1).toString().padStart(2, '0') }}
-            </span>
-            <span class="w-8 md:w-12 h-0.5 bg-orange-400 rounded-full"></span>
-            <span class="text-white/40 text-sm tabular-nums">
-              {{ slides.length.toString().padStart(2, '0') }}
-            </span>
-          </div>
-
-          <!-- Botones CTA -->
-          <div class="flex flex-row gap-2 sm:gap-3">
-            <button (click)="irASede('manizales')"
-                    class="bg-transparent text-white border border-white/30
-                           font-bold px-3 py-1.5 sm:px-6 sm:py-3 rounded-full
-                           text-xs sm:text-base
-                           hover:bg-orange-500 hover:border-orange-500 transition-all duration-300
-                           flex items-center gap-1 sm:gap-2 group/btn hover:scale-105 shadow-lg cursor-pointer">
-              🏥 Sede Manizales
-              <span class="group-hover/btn:translate-x-1 transition-transform">→</span>
-            </button>
-            <button (click)="irASede('pereira')"
-                    class="bg-transparent text-white border border-white/30
-                           font-bold px-3 py-1.5 sm:px-6 sm:py-3 rounded-full
-                           text-xs sm:text-base
-                           hover:bg-orange-500 hover:border-orange-500 transition-all duration-300
-                           flex items-center gap-1 sm:gap-2 group/btn hover:scale-105 shadow-lg cursor-pointer">
-              🏥 Sede Pereira
-              <span class="group-hover/btn:translate-x-1 transition-transform">→</span>
-            </button>
-          </div>
+        <!-- Botones CTA -->
+        <div class="flex flex-row gap-2 sm:gap-3 mb-4 md:mb-8">
+          <button (click)="irASede('manizales')"
+                  class="bg-transparent text-teal-300 border border-teal-300/60
+                         font-bold px-3 py-1.5 sm:px-6 sm:py-3 rounded-full
+                         text-xs sm:text-base
+                         hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-300
+                         flex items-center gap-1 sm:gap-2 group/btn hover:scale-105 shadow-lg cursor-pointer">
+            🏥 Sede Manizales
+            <span class="group-hover/btn:translate-x-1 transition-transform">→</span>
+          </button>
+          <button (click)="irASede('pereira')"
+                  class="bg-transparent text-teal-300 border border-teal-300/60
+                         font-bold px-3 py-1.5 sm:px-6 sm:py-3 rounded-full
+                         text-xs sm:text-base
+                         hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-300
+                         flex items-center gap-1 sm:gap-2 group/btn hover:scale-105 shadow-lg cursor-pointer">
+            🏥 Sede Pereira
+            <span class="group-hover/btn:translate-x-1 transition-transform">→</span>
+          </button>
         </div>
 
-        <!-- Barras de progreso clickables -->
-        <div class="flex gap-2 mt-6 md:mt-8 max-w-[200px] md:max-w-xs">
-          <div *ngFor="let s of slides; let i = index"
-               class="flex-1 h-[3px] bg-white/25 rounded-full overflow-hidden cursor-pointer"
-               (click)="goToSlide(i)">
-            <div class="h-full bg-orange-500 rounded-full"
-                 [class.progress-bar-active]="i === currentIndex"
-                 [style.width]="i < currentIndex ? '100%' : (i > currentIndex ? '0%' : '')">
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- ── Flechas hover desktop ── -->
