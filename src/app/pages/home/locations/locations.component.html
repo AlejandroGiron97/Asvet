@@ -2,7 +2,7 @@
   <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
 
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 dark:text-blue-300 tracking-tight">Visítanos</h2>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-teal-700 dark:text-teal-300 tracking-tight">Visítanos</h2>
       <p class="mt-4 text-xl text-gray-500 dark:text-gray-400">Encuentra la sede más cercana para la atención de tu mascota.</p>
       <div class="mt-6 w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
     </div>
@@ -14,13 +14,14 @@
            class="bg-white dark:bg-gray-800 rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
 
         <div class="py-6 text-center bg-white dark:bg-gray-800 z-10 relative transition-colors duration-300">
-          <h3 class="text-3xl font-extrabold text-blue-900 dark:text-blue-300">Sede Manizales</h3>
+          <h3 class="text-3xl font-extrabold text-teal-700 dark:text-teal-300">Sede Manizales</h3>
           <div class="w-16 h-1 bg-orange-400 mx-auto mt-3 rounded-full"></div>
         </div>
 
         <div class="relative w-full h-72 sm:h-96 bg-gray-200 dark:bg-gray-700 overflow-hidden group">
           <img [src]="fotoManizales"
                loading="lazy"
+               decoding="async"
                width="800" height="500"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                alt="Sede ASVET Manizales - Cra 25A # 53A-66 Barrio la Arboleda">
@@ -33,6 +34,7 @@
                (click)="abrirMapsManizales()">
             <img [src]="mapaManizalesImg"
                  loading="lazy"
+                 decoding="async"
                  width="600" height="400"
                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                  alt="Mapa Manizales - Click para abrir en Google Maps">
@@ -59,7 +61,7 @@
               📞 Celular: 311 777 1849
             </a>
             <a href="tel:6068886533"
-               class="bg-blue-50 dark:bg-blue-900/40 text-blue-900 dark:text-blue-300 text-center py-4 rounded-xl font-bold hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
+               class="bg-teal-50 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 text-center py-4 rounded-xl font-bold hover:bg-teal-100 dark:hover:bg-teal-900/60 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
               ☎️ Fijo: (606) 888 6533
             </a>
           </div>
@@ -71,13 +73,14 @@
            class="bg-white dark:bg-gray-800 rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col hover:shadow-2xl transition-all duration-300 w-full animate-fadeInUp">
 
         <div class="py-6 text-center bg-white dark:bg-gray-800 z-10 relative transition-colors duration-300">
-          <h3 class="text-3xl font-extrabold text-blue-900 dark:text-blue-300">Sede Pereira</h3>
+          <h3 class="text-3xl font-extrabold text-teal-700 dark:text-teal-300">Sede Pereira</h3>
           <div class="w-16 h-1 bg-orange-400 mx-auto mt-3 rounded-full"></div>
         </div>
 
         <div class="relative w-full h-72 sm:h-96 bg-gray-200 dark:bg-gray-700 overflow-hidden group">
           <img [src]="fotoPereira"
                loading="lazy"
+               decoding="async"
                width="800" height="500"
                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                alt="Sede ASVET Pereira - Cra 12B # 08-48 Barrio los Rosales">
@@ -90,6 +93,7 @@
                (click)="abrirMapsPereira()">
             <img [src]="mapaPereiramg"
                  loading="lazy"
+                 decoding="async"
                  width="600" height="400"
                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                  alt="Mapa Pereira - Click para abrir en Google Maps">
@@ -116,7 +120,7 @@
               📞 Celular: 300 749 3929
             </a>
             <a href="tel:6063147471"
-               class="bg-blue-50 dark:bg-blue-900/40 text-blue-900 dark:text-blue-300 text-center py-4 rounded-xl font-bold hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
+               class="bg-teal-50 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 text-center py-4 rounded-xl font-bold hover:bg-teal-100 dark:hover:bg-teal-900/60 transition-colors flex items-center justify-center gap-2 text-lg mt-1">
               ☎️ Fijo: (606) 314 7471
             </a>
           </div>
