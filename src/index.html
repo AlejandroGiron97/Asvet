@@ -20,13 +20,30 @@
   <meta property="og:image"       content="https://asvets.com/img/Asvet.webp">
 
   <!-- ── Performance: preload primera imagen del slider (LCP) ── -->
-  <link rel="preload" as="image" href="img/hero_1O.webp" media="(min-width: 769px)">
-  <link rel="preload" as="image" href="img/hero_1O.webp" media="(max-width: 768px)">
+  <link rel="preload" as="image" href="img/hero_1O.webp" fetchpriority="high">
 
   <!-- ── Favicon ── -->
   <link rel="icon" type="image/png" href="img/Asvet.webp">
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <!--
+      Placeholder estático visible antes de que Angular arranque.
+      Le da al navegador el signal fetchpriority=high sobre el LCP real
+      y descarga la imagen hero en el critical path sin esperar JS.
+      Angular reemplaza este contenido cuando bootstrapea.
+    -->
+    <div style="padding:8px 12px;background:#f9fafb;">
+      <div style="border-radius:16px;overflow:hidden;height:300px;background:#e5e7eb;">
+        <img src="img/hero_1O.webp"
+             fetchpriority="high"
+             decoding="sync"
+             width="1920"
+             height="1080"
+             style="width:100%;height:100%;object-fit:contain;"
+             alt="ASVET Clínica Veterinaria Manizales y Pereira">
+      </div>
+    </div>
+  </app-root>
 </body>
 </html>
