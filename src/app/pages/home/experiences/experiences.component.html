@@ -1,9 +1,10 @@
-<section class="py-16 bg-gray-50/40 dark:bg-gray-900/60 backdrop-blur-sm transition-colors duration-300">
+<section class="py-10 bg-gray-50/40 dark:bg-gray-900/60 backdrop-blur-sm transition-colors duration-300">
   <div class="container mx-auto px-4">
     
-    <h2 class="text-3xl md:text-5xl font-extrabold text-[#459AAA] dark:text-[#459AAA] tracking-tight text-center mb-20">
+    <h2 class="text-3xl md:text-5xl font-extrabold text-[#459AAA] dark:text-[#459AAA] tracking-tight text-center mb-8">
       Experiencias
     </h2>
+
 
     <!-- group agregado -->
     <div class="relative max-w-4xl mx-auto group">
@@ -16,7 +17,7 @@
           <div *ngFor="let slide of slides; trackBy: trackByIndex"
                class="w-full flex-shrink-0">
 
-            <div class="bg-white/50 dark:bg-gray-800/60 backdrop-blur-sm p-8 rounded-2xl transition-colors duration-300">
+            <div class="bg-white/50 dark:bg-gray-800/60 backdrop-blur-sm p-5 rounded-2xl transition-colors duration-300">
 
               <div class="grid md:grid-cols-2 gap-6">
 
@@ -27,7 +28,7 @@
                        loading="lazy"
                        decoding="async"
                        [alt]="experience.name"
-                       class="w-85 h-85 object-contain mb-4">
+                       class="w-full h-64 object-contain mb-3">
 
                   <div class="text-center">
                     <p class="text-lg text-gray-700 dark:text-gray-300 mb-4 italic">
