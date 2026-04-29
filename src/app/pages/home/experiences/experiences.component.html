@@ -1,6 +1,6 @@
 <section class="py-10 md:py-16 bg-gray-50/40 dark:bg-gray-900/60 backdrop-blur-sm transition-colors duration-300">
   <div class="container mx-auto px-4">
-    
+
     <h2 class="text-3xl md:text-6xl font-extrabold text-[#459AAA] dark:text-[#459AAA] tracking-tight text-center mb-8 md:mb-12">
       Experiencias
     </h2>
@@ -17,30 +17,30 @@
                class="w-full flex-shrink-0">
 
             <div class="bg-white/50 dark:bg-gray-800/60 backdrop-blur-sm p-3 md:p-8 rounded-2xl md:rounded-3xl transition-colors duration-300">
-  
+
               <div class="grid md:grid-cols-2 gap-4 md:gap-10">
-                
+
                 <div *ngFor="let experience of slide; trackBy: trackByExperience"
                     class="flex flex-col items-center">
-                  
+
                   <!-- Imagen: compacta en móvil, grande en desktop -->
                   <img [src]="experience.url"
                       loading="lazy"
                       decoding="async"
                       [alt]="experience.name"
                       class="w-full h-40 md:h-80 object-contain mb-2 md:mb-5">
-                  
+
                   <!-- Texto del comentario: compacto en móvil, grande en desktop -->
                   <div class="text-center px-1 md:px-4">
                     <p class="text-sm md:text-xl text-gray-700 dark:text-gray-300 mb-2 md:mb-5 italic leading-tight md:leading-relaxed">
                       "{{ experience.comment }}"
                     </p>
                   </div>
-                  
+
                 </div>
-                
+
               </div>
-              
+
             </div>
 
           </div>
