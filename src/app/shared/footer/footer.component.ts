@@ -48,6 +48,9 @@ export class FooterComponent {
       // Abre WhatsApp en una pestaña nueva
       window.open(urlWhatsApp, '_blank');
 
+      // Conversión Google Ads — formulario PQR enviado
+      (window as any).gtag('event', 'conversion', { send_to: 'AW-317889940' });
+
       // Después de 3 segundos, ocultamos el check verde y vaciamos las cajas de texto
       setTimeout(() => {
         this.enviado = false;
