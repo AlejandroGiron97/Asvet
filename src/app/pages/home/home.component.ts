@@ -67,4 +67,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     }, 100);
   }
+
+  registrarConversion(): void {
+    (window as any).gtag('event', 'conversion', { send_to: 'AW-317889940' });
+  }
 }
