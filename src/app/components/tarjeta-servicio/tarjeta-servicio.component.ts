@@ -15,6 +15,8 @@ export class TarjetaServicioComponent {
   @Output() agendar = new EventEmitter<string>();
 
   clickAgendar() {
+    // Conversión Google Ads — clic en agendar servicio
+    (window as any).gtag('event', 'conversion', { send_to: 'AW-317889940' });
     this.agendar.emit(this.titulo);
   }
 }

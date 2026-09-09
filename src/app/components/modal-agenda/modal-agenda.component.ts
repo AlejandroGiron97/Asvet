@@ -26,6 +26,9 @@ export class ModalAgendaComponent {
 
     window.open(urlWa, '_blank');
 
+    // Conversión Google Ads — agenda por WhatsApp
+    (window as any).gtag('event', 'conversion', { send_to: 'AW-317889940' });
+
     // Le decimos al componente padre que cierre el modal
     this.cerrar.emit();
   }
